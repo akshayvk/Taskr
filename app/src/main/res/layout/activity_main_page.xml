@@ -14,36 +14,40 @@
     tools:context=".MainPage">
 
 
-
-
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/date" />
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Task"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:textColor="#32cd32"
+        android:textSize="20dp"
         android:onClick="sendMessage"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:id="@+id/button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-        <!--<TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textAppearance="?android:attr/textAppearanceLarge"
-           android:text="Welcome to BlueToDo!"
-           android:id="@+id/textView2"
-           android:layout_centerHorizontal="true" />
-        --><!--android:layout_below="@+id/textView2"-->
+        android:layout_alignParentLeft="true"
+         />
+
        <EditText
            android:layout_width="wrap_content"
-           android:layout_height="45dp"
+           android:layout_height="75dp"
            android:id="@+id/editMessage"
-           android:layout_alignBottom="@+id/button"
            android:hint="Enter a New Task"
-           android:layout_toLeftOf="@+id/button"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentStart="true" />
+           android:layout_alignBottom="@+id/button"
+           android:layout_alignRight="@+id/date"
+           android:layout_alignEnd="@+id/date"
+           android:layout_toRightOf="@+id/button"
+           android:layout_toEndOf="@+id/button"
+           android:layout_alignTop="@+id/button" />
 
 
        <LinearLayout
@@ -53,32 +57,19 @@
            android:focusable="false"
            android:focusableInTouchMode="false"
            android:orientation="vertical"
-           android:layout_below="@id/editMessage"
-           android:layout_centerVertical="true"
-           android:layout_alignRight="@id/button"
-           android:layout_alignEnd="@id/button">
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textAppearance="?android:attr/textAppearanceMedium"
-               android:text="@string/heading"
-               android:textSize="24sp"
-               android:id="@+id/heading"
-               android:layout_gravity="center_horizontal"
-               android:layout_centerVertical="true"
-               android:layout_centerHorizontal="true"
-               android:layout_marginTop="45dp"
-               android:layout_marginBottom="25dp"/>
+           android:layout_marginTop="40dp"
+           android:layout_below="@+id/editMessage"
+           android:layout_centerHorizontal="true">
+
        </LinearLayout>
        <Button
            style="?android:attr/buttonStyleSmall"
            android:layout_width="wrap_content"
            android:layout_height="match_parent"
-           android:text="Clear Finished Tasks?"
+           android:text="Clear Finished Tasks"
            android:onClick="clearTasks"
            android:id="@+id/clear"
            android:layout_below="@id/failure_reasonslist"
-
            android:visibility="invisible"
            android:layout_marginTop="15dp"
            android:layout_alignParentLeft="true"
